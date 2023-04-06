@@ -25,11 +25,15 @@ public class Mycontroller {
         return this.student;
     }
 
-    @RequestMapping(value="/user/{userId}",method = RequestMethod.GET)
+//    @RequestMapping(value="/user/{userId}",method = RequestMethod.GET)
+    @GetMapping("/user/{userId}")
     public String user(@PathVariable("userId") Integer userId)
     {
+
         return String.valueOf(userId);
     }
+
+
     @GetMapping("/developer")
     public String getDeveloper()
     {
